@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.Master.cs" Inherits="Login_with_Master_Page.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1 class="header"> Welcome to My page</h1>
+            <div class="navigation">
+                <ul>
+                  <li><a class="active" href="#home">Home</a></li>
+                  <li><a href="#news">News</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+             </asp:ContentPlaceHolder>
+            <div>
+                  <p class="footer">© All Right reserved 2021</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
