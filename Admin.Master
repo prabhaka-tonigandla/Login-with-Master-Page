@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Login_with_Master_Page.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1 class="header"> Welcome to Admin Page</h1>
+            <div class="navigation">
+                <ul>
+                  <li><a class="active" href="#home">Account</a></li>
+                  <li><a href="#news">News</a></li>
+                  
+                  <li><a href="#about">Logout</a></li>
+                </ul>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div>
+                  <p class="footer">© All Right reserved 2021</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
