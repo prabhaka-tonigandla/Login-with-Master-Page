@@ -1,20 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Login_with_Master_Page.homepage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link rel="stylesheet" href="style.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1 class="header"> Please enter you email and password</h1>
     <div class="login">    
-    <form id="login" >
-        <asp:Label ID="msg" runat="server" Text=""></asp:Label>
+        
         <label><b>User Name     
         </b>    
         </label>   
-        <asp:TextBox ID="Uname" name="Uname" placeholder="Username" runat="server"></asp:TextBox>  
+        <asp:TextBox runat="server" ID="txtUsername" name="Uname" placeholder="Username"></asp:TextBox>  
         <br><br>    
         <label><b>Password     
         </b>    
         </label>    
-        <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+        <asp:TextBox runat="server" type="Password" name="Pass" ID="txtPassword" placeholder="Password"> </asp:TextBox> 
         <br><br>     
         <asp:Button ID="log" name="log" runat="server" Text="Log In Here" OnClick="log_Click" />
         <br><br>    
@@ -22,7 +22,11 @@
         <span>Remember me</span>    
         <br><br>    
         Forgot <a href="#">Password</a>   
-        <asp:TextBox ID="msg" runat="server"></asp:TextBox>
-    </form>     
+        <br /><br />
+        <div class="red">
+             <asp:Literal ID="ltrMessage"   runat="server"></asp:Literal>
+        </div>
+       
+         
 </div>    
 </asp:Content>

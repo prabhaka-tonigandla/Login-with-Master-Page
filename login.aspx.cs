@@ -21,25 +21,28 @@ namespace Login_with_Master_Page
         protected void log_Click(object sender, EventArgs e)
         {
             //Implementing try and catch
-            try
+           try
             {
                 User u = new User();
-                u.Username = txtUsername.text;
-                u.Password = txtPassword.text;
+                u.Username = txtUsername.Text;
+                u.Password = txtPassword.Text;
                 UserDao ud = new UserDao();
                 DataTable dt = ud.CheckUser(u);
+                string role = dt.Rows[0]["Role"].ToString();
                 if (dt.Rows.Count > 0)
                 {
+                    Session["Username"] = txtUsername.Text;
+                    Session["Password"] = txtPassword.Text;
                     Response.Redirect("AdminPage.aspx");
                 }
                 else
                 {
-                    msg.Text=""Invalid Username or Password";
+                    ltrMessage.Text="Invalid Username or Password";
                 }
             }
             catch(Exception ex)
             {
-                msg.Text = ex.Message;
+                ltrMessage.Text = ex.Message;
             }
         }
     }

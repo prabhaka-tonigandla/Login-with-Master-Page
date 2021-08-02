@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Login_with_Master_Page.Admin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.Master.cs" Inherits="Login_with_Master_Page.Admin" %>
 
 <!DOCTYPE html>
 
@@ -18,9 +18,20 @@
                   <li><a class="active" href="#home">Account</a></li>
                   <li><a href="#news">News</a></li>
                   
-                  <li><a href="#about">Logout</a></li>
+                  <li>
+
+                  </li>
+                    <li>Welcome<asp:Label ID="lblUsername" runat="server"></asp:Label>
+&nbsp;</li>
+                    <li></li>
+                    <li></li>
+                    <li>
+                      <asp:Button ID="Button1" runat="server" Text="Logout" OnClick="Button1_Click" />
+
+                  &nbsp;</li>
                 </ul>
             </div>
+         
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
             <div>

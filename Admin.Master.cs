@@ -11,7 +11,12 @@ namespace Login_with_Master_Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
         }
     }
 }

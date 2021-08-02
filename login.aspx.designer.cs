@@ -15,22 +15,22 @@ namespace Login_with_Master_Page
     {
 
         /// <summary>
-        /// msg control.
+        /// txtUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label msg;
+        protected global::System.Web.UI.WebControls.TextBox txtUsername;
 
         /// <summary>
-        /// Uname control.
+        /// txtPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Uname;
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
         /// log control.
@@ -42,12 +42,12 @@ namespace Login_with_Master_Page
         protected global::System.Web.UI.WebControls.Button log;
 
         /// <summary>
-        /// msg control.
+        /// ltrMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox msg;
+        protected global::System.Web.UI.WebControls.Literal ltrMessage;
     }
 }

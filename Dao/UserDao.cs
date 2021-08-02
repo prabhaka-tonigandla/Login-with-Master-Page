@@ -12,20 +12,21 @@ namespace Login_with_Master_Page.Dao
 {
     public class UserDao
     {
+        DbConnection dc = new DbConnection();
         //Check username nad password
         public DataTable CheckUser(User u)
         {
             //connection to Database
-            DbConnection dc = new DbConnection();
+            
             string sql = "SELECT * FROM LOGIN WHERE Username=@Username and Password=@Password";
             SqlCommand cmd = new SqlCommand(sql, dc.cn);
             cmd.Parameters.AddWithValue("@Username", u.Username);
             cmd.Parameters.AddWithValue("@Password", u.Password);
-            SqlDataAdapter da = new SqlDataAdapter();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             //Database name
             da.Fill(ds, "Login");
-            return ds.Tables["Login"];
+            return ds.Tables[0];
         }
     }
 }
