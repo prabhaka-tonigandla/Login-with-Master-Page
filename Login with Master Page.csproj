@@ -70,6 +70,7 @@
     <Content Include="AdminPage.aspx" />
     <Content Include="login.aspx" />
     <Content Include="style.css" />
+    <Content Include="User_profile.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -104,12 +105,27 @@
     <Compile Include="Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
+    <Compile Include="UserProfile.Master.cs">
+      <DependentUpon>UserProfile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfile.Master.designer.cs">
+      <DependentUpon>UserProfile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User_profile.aspx.cs">
+      <DependentUpon>User_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_profile.aspx.designer.cs">
+      <DependentUpon>User_profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Utils\DbConnection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin.Master" />
     <None Include="packages.config" />
     <Content Include="Home.Master" />
+    <Content Include="UserProfile.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -33,7 +33,14 @@ namespace Login_with_Master_Page
                 {
                     Session["Username"] = txtUsername.Text;
                     Session["Password"] = txtPassword.Text;
-                    Response.Redirect("AdminPage.aspx");
+                    if (role == "Admin")
+                    {
+                        Response.Redirect("AdminPage.aspx");
+                    }
+                    if (role == "User")
+                    {
+                        Response.Redirect("User_profile.aspx");
+                    }
                 }
                 else
                 {
